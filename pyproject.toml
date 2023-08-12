@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "nicegui-draggable"
+version = "0.0.1"
+description = "Draggable / rearrangeable cards for nicegui"
+authors = ["Žiga Ivanšek <ziga.ivansek@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/zigai/nicegui-draggable"
+keywords = []
+classifiers = []
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nicegui = "^1.2.21"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 100
+target_version = ['py310']
