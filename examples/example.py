@@ -3,10 +3,11 @@ from nicegui import ui
 from nicegui_draggable import column, draggable
 
 
-class draggable_input(draggable):
-    def __init__(self, title) -> None:
+class DraggableElement(draggable):
+    def __init__(self, title, drag_enabled=True) -> None:
         self.title = title
-        super().__init__()
+        super().__init__(drag_enabled=drag_enabled)
+        self.classes("bg-white shadow-md rounded-md p-4 m-2")
 
     def __repr__(self) -> str:
         return f"draggable_input({self.title})"
@@ -23,15 +24,15 @@ class draggable_input(draggable):
 
 with ui.row():
     with column() as col_1:
-        draggable_input("Simplify Layouting")
-        draggable_input("Provide Deployment")
+        DraggableElement("Simplify Layouting")
+        DraggableElement("Provide Deployment")
     with column() as col_2:
-        draggable_input("Improve Documentation")
+        DraggableElement("Improve Documentation")
     with column() as col_3:
-        draggable_input("Invent NiceGUI")
-        draggable_input("Test in own Projects")
-        draggable_input("Publish as Open Source")
-        draggable_input("Release Native-Mode")
+        DraggableElement("Invent NiceGUI", drag_enabled=False)
+        DraggableElement("Test in own Projects", drag_enabled=False)
+        DraggableElement("Publish as Open Source", drag_enabled=False)
 
-ui.run()
-print(col_3.get_draggable_children())
+
+if __name__ in {"__main__", "__mp_main__"}:
+    ui.run()
