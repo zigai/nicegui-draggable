@@ -2,7 +2,7 @@
 ![Supported versions](https://img.shields.io/badge/python-3.10+-blue.svg)
 [![license](https://img.shields.io/github/license/zigai/nicegui-draggable.svg)](https://github.com/zigai/nicegui-draggable/blob/master/LICENSE)
 
-> **Note**
+> **Note:**
 > Development continued in [nicegui-extensions](https://github.com/zigai/nicegui-extensions)
 
 # Installation
